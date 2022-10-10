@@ -9,7 +9,8 @@ let con = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password:'248163264128256',
-    database:'mobs'
+    database:'mobs',
+    port:'3306'
  })
 
 con.connect()
