@@ -3,7 +3,6 @@ const mysql = require('mysql2')
 let app = express()
 
 let bodyParser = require('body-parser')
-const { query } = require('express')
 let con = mysql.createConnection({
 
     host: 'localhost',
