@@ -2,14 +2,14 @@ const express = require('express')
 const mysql = require('mysql2')
 let app = express()
 
-let bodyParser = require('body-parser')
+let bodyParser = require('body-parser');
+const PORT = process.env.PORT || 7362;
 let con = mysql.createConnection({
 
-    host: 'localhost',
+    host: 'containers-us-west-81.railway.app',
     user: 'root',
-    password:'248163264128256',
-    database:'mobs',
-    port:'3306'
+    password:'pXLJdtPRuWcPAY4lUqzQ',
+    database:'railway',
  })
 
 con.connect()
@@ -293,6 +293,6 @@ app.post('/consultarMobs',(req,res)=>{
     })
 })
 
-app.listen(8000,()=>{
-    console.log("Servidor escuchando en el puerto 8000")
+app.listen(PORT,()=>{
+    console.log("Servidor escuchando en el puerto 7362")
 })
