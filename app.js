@@ -22,7 +22,7 @@ app.use(bodyParser.urlencoded({
 
 app.use(express.static('public'))
 
-app.post('/agregarMob',(req,res)=>{
+app.get('/agregarMob',(req,res)=>{
     let nombre = req.body.nombreMob
     let tipo = req.body.tipoMob
     let vida = req.body.vidaMob
