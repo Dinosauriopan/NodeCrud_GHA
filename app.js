@@ -213,7 +213,7 @@ app.post('/actualizarMob',(req,res)=>{
     })
 })
 
-app.get('/consultarMobs',(req,res)=>{
+app.post('/consultarMobs',(req,res)=>{
     let id = req.body.id;
     con.query('select * from estadisticas ',(err,respuesta,fields)=>{
 
