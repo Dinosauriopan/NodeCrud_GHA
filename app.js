@@ -22,7 +22,7 @@ app.use(bodyParser.urlencoded({
 
 app.use(express.static('public'))
 
-app.get('/agregarMob',(req,res)=>{
+app.post('/agregarMob',(req,res)=>{
     let nombre = req.body.nombreMob
     let tipo = req.body.tipoMob
     let vida = req.body.vidaMob
@@ -213,7 +213,7 @@ app.post('/actualizarMob',(req,res)=>{
     })
 })
 
-app.post('/consultarMobs',(req,res)=>{
+app.get('/consultarMobs',(req,res)=>{
     let id = req.body.id;
     con.query('select * from estadisticas ',(err,respuesta,fields)=>{
 
