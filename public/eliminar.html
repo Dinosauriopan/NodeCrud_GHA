@@ -35,7 +35,7 @@
             </div>
             <form action="/eliminarMob" method="post">
             <label class="form-label">Eliminar mob:&nbsp;</label>
-            <input type="text" name="IdE" placeholder="id del mob"><br>
+            <input type="text" name="nombreE" placeholder="Nombre del mob" onkeypress="return validarn(event)"><br>
             <input class="btn btn-primary" type="submit" value="Eliminar mob">
             </form>
         </div>
@@ -48,6 +48,7 @@
     </footer>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/grayscale.js"></script>
+    <script src="assets/validacion.js"></script>
 </body>
 
 </html>

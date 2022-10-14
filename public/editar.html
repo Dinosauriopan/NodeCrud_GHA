@@ -35,10 +35,10 @@
             </div>
             <form action="/actualizarMob" method="post">
             <label class="form-label">Editar mob:&nbsp;</label><br>
-            <input type="text" name="idA" placeholder="Id del mob a Actualizar"><br><br>
-            <input type="text" name="nombreA" placeholder="Nuevo nombre"><br><br>
-            <input type="text" name="tipoA" placeholder="Nuevo tipo"><br><br>
-            <input type="text" name="vidaA" placeholder="Nueva vida"><br><br>
+            <input type="text" name="idA" placeholder="Id del mob a Actualizar" onkeypress="return validarnn(event)"><br><br>
+            <input type="text" name="nombreA" placeholder="Nuevo nombre" onkeypress="return validarn(event)"><br><br>
+            <input type="text" name="tipoA" placeholder="Nuevo tipo" onkeypress="return validarn(event)"><br><br>
+            <input type="text" name="vidaA" placeholder="Nueva vida" onkeypress="return validarnn(event)"><br><br>
             <input class="btn btn-primary" type="submit" value="Editar mob">
             </form>
         </div>
@@ -51,6 +51,7 @@
     </footer>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/grayscale.js"></script>
+    <script src="assets/validacion.js"></script>
 </body>
 
 </html>

@@ -34,10 +34,10 @@
                 </div>
             </div>
             <form action="/agregarMob" method="post">
-            <label class="form-label">Nombre del mob:&nbsp;</label><input type="text" name="nombreMob" placeholder="Escribe el nombre">
+            <label class="form-label">Nombre del mob:&nbsp;</label><input type="text" name="nombreMob" placeholder="Escribe el nombre" onkeypress="return validarn(event)">
             <br>
-            <label class="form-label">Tipo de mob:&nbsp;</label><input type="text" name="tipoMob" placeholder="Pasivo u Hostil">
-            <br><label class="form-label">Vida del mob:&nbsp;</label><input type="text" name="vidaMob" placeholder="Vida del mob">
+            <label class="form-label">Tipo de mob:&nbsp;</label><input type="text" name="tipoMob" placeholder="Pasivo u Hostil" onkeypress="return validarn(event)">
+            <br><label class="form-label">Vida del mob:&nbsp;</label><input type="text" name="vidaMob" placeholder="Vida del mob" onkeypress="return validarnn(event)">
             <br><input class="btn btn-primary" type="submit" value="Agregar Mob">
 
         </div>
@@ -50,6 +50,7 @@
     </footer>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/grayscale.js"></script>
+    <script src="assets/validacion.js"></script>
 </body>
 
 </html>

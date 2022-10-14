@@ -65,10 +65,10 @@ app.post('/agregarMob',(req,res)=>{
                         </div>
                     </div>
                     <form action="/agregarMob" method="post">
-                    <label class="form-label">Nombre del mob:&nbsp;</label><input type="text" name="nombreMob" placeholder="Escribe el nombre">
+                    <label class="form-label">Nombre del mob:&nbsp;</label><input type="text" name="nombreMob" placeholder="Escribe el nombre" onkeypress="return validarn(event)">
                     <br>
-                    <label class="form-label">Tipo de mob:&nbsp;</label><input type="text" name="tipoMob" placeholder="Pasivo u Hostil">
-                    <br><label class="form-label">Vida del mob:&nbsp;</label><input type="text" name="vidaMob" placeholder="Vida del mob">
+                    <label class="form-label">Tipo de mob:&nbsp;</label><input type="text" name="tipoMob" placeholder="Pasivo u Hostil" onkeypress="return validarn(event)">
+                    <br><label class="form-label">Vida del mob:&nbsp;</label><input type="text" name="vidaMob" placeholder="Vida del mob" onkeypress="return validarn(event)">
                     <br><input class="btn btn-primary" type="submit" value="agregarMob">
                     </form>
         
@@ -82,6 +82,7 @@ app.post('/agregarMob',(req,res)=>{
             </footer>
             <script src="assets/bootstrap/js/bootstrap.min.js"></script>
             <script src="assets/js/grayscale.js"></script>
+            <script src="assets/validacion.js"></script>
         </body>
         
         </html>`)
@@ -89,8 +90,8 @@ app.post('/agregarMob',(req,res)=>{
 })
 
 app.post('/eliminarMob',(req,res)=>{
-    let idE = req.body.IdE;
-    con.query('delete from estadisticas where estadisticas.id = "'+idE+'"',(err,respuesta,fields)=>{
+    let nombreE = req.body.nombreE;
+    con.query('delete from estadisticas where estadisticas.nombre = "'+nombreE+'"',(err,respuesta,fields)=>{
         res.send(`<!DOCTYPE html>
         <html>
         
@@ -128,7 +129,7 @@ app.post('/eliminarMob',(req,res)=>{
                     </div>
                     <form action="/eliminarMob" method="post">
                     <label class="form-label">Eliminar mob:&nbsp;</label>
-                    <input type="text" name="IdE" placeholder="id del mob"><br>
+                    <input type="text" name="nombreE" placeholder="Nombre del mob" onkeypress="return validarn(event)"><br>
                     <input class="btn btn-primary" type="submit" value="Eliminar mob">
                     </form>
                 </div>
@@ -141,6 +142,7 @@ app.post('/eliminarMob',(req,res)=>{
             </footer>
             <script src="assets/bootstrap/js/bootstrap.min.js"></script>
             <script src="assets/js/grayscale.js"></script>
+            <script src="assets/validacion.js"></script>
         </body>
         
         </html>`)
@@ -191,10 +193,10 @@ app.post('/actualizarMob',(req,res)=>{
                     </div>
                     <form action="/actualizarMob">
                     <label class="form-label">Editar mob:&nbsp;</label><br>
-                    <input type="text" name="idA" placeholder="Id del mob a Actualizar"><br><br>
-                    <input type="text" name="nombreA" placeholder="Nuevo nombre"><br><br>
-                    <input type="text" name="tipoA" placeholder="Nuevo tipo"><br><br>
-                    <input type="text" name="vidaA" placeholder="Nueva vida"><br><br>
+                    <input type="text" name="idA" placeholder="Id del mob a Actualizar" onkeypress="return validarnn(event)"><br><br>
+                    <input type="text" name="nombreA" placeholder="Nuevo nombre" onkeypress="return validarn(event)"><br><br>
+                    <input type="text" name="tipoA" placeholder="Nuevo tipo" onkeypress="return validarn(event)"><br><br>
+                    <input type="text" name="vidaA" placeholder="Nueva vida" onkeypress="return validarnn(event)"><br><br>
                     <input class="btn btn-primary" type="submit" value="Editar mob">
                     </form>
                 </div>
@@ -207,6 +209,7 @@ app.post('/actualizarMob',(req,res)=>{
             </footer>
             <script src="assets/bootstrap/js/bootstrap.min.js"></script>
             <script src="assets/js/grayscale.js"></script>
+            <script src="assets/validacion.js"></script>
         </body>
         
         </html>`)
